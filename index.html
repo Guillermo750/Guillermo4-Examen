@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="js/app.js"></script>
+    <title>4º Exámen</title>
+</head>
+
+<body class="font-serif bg-gray-100">
+    <!-- Cabecera -->
+    <header class="mx-auto">
+        <div class="bg-white pt-6 flex justify-between ">
+            <div class="hidden md:block">
+                <a href=""><img src="logo/Acerco.png" alt="Logo" class="h-28" /></a>
+            </div>
+            <div class="hidden md:flex items-end mx-auto">
+                <a href=""><span
+                        class="font-bold px-5 text-center mx-2 text-base text-white bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Inicio</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Venta</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Alquilar</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Promociones</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Bancario</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Inversión</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Alertas</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Contacto</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Empleo</span></a>
+                <a href=""><span
+                        class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Publica
+                        tu inmueble</span></a>
+            </div>
+            <!-- BOTÓN HAMBURGUESA -->
+            <div class="w-full flex md:hidden mx-auto justify-center bg-[rgb(204,0,0)]" >
+                <button id="boton" class="text-white px-3 py-1 text-xl font-bold">
+                    Menu
+                </button>
+            </div>
+    </header>
+    <!-- Menú Hamburguesa Móvil -->
+    <section class="hidden" id="menu">
+        <div class="flex flex-col justify-center items-center space-y-4 py-4">
+            <a href=""><span
+                    class="font-bold px-5 text-center mx-2 text-base text-white bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Inicio</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Venta</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Alquilar</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Promociones</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Bancario</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Inversión</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Alertas</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Contacto</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Empleo</span></a>
+            <a href=""><span
+                    class="font-bold px-2 text-center mx-2 text-base hover:text-white hover:bg-[rgb(204,0,0)] transition-colors duration-300 cursor-pointer py-1">Publica
+                    tu inmueble</span></a>
+        </div>
+    </section>
+
+    <!-- Carrousel -->
+    <section class="relative w-full overflow-hidden h-[550px] sm:h-[600px]">
+        <div class="flex transition-transform duration-2 ease-in-out h-full" id="carousel">
+            <!-- Las imágenes del carrusel se mantienen igual -->
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/1_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/2_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/3_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/4_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/5_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/6_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/7_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/8_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/9_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="w-full flex-shrink-0 h-full">
+                <img src="imagenes/10_l.jpg" class="w-full h-full object-cover" alt="">
+            </div>
+        </div>
+        
+        <!-- Controles del carrusel -->
+        <button class="absolute top-1/2 -translate-y-1/2 left-0 bg-black/30 rounded-full mx-1 text-white text-xl h-10 w-10 text-center hidden sm:block" onclick="prevSlide()">&#10094;</button>
+        <button class="absolute top-1/2 -translate-y-1/2 right-0 bg-black/30 rounded-full mx-1 text-white text-xl h-10 w-10 text-center hidden sm:block" onclick="nextSlide()">&#10095;</button>
+    
+        <!-- FORMULARIO -->
+        <div class="absolute top-4 sm:top-16 left-0 w-full px-12">
+            <div class="flex flex-col items-center justify-center gap-4">
+                <span class="text-white text-xl sm:text-3xl text-center mb-2 sm:mb-4">Más cerca de ti, si necesitas comprar, vender o alquilar: ¡llámanos!</span>
+                <form action="" class="w-full max-w-5xl md:max-w-6xl bg-black bg-opacity-25 hover:bg-opacity-100 transition-all duration-300 py-2 px-4">
+                    <div class="flex flex-col sm:flex-row justify-center items-stretch gap-2 py-3">
+                        <select name="propiedad" id="propiedad" class="w-full sm:w-auto mb-2 sm:mb-0">
+                            <option value="0">Tipo Propiedad</option>
+                            <option value="0">Tipo Propiedad</option>
+                            <option value="1">Todas</option>
+                            <option value="2">Casa Rústica</option>
+                            <option value="3">Casa/Chalet</option>
+                            <option value="4">Edificio</option>
+                            <option value="5">Garaje</option>
+                            <option value="6">Local</option>
+                            <option value="7">Oficina</option>
+                            <option value="8">Piso</option>
+                            <option value="9">Terreno</option>
+                        </select>
+    
+                        <select name="lugar" id="lugar" class="w-full sm:w-auto mb-2 sm:mb-0">
+                            <option value="">Escribe donde buscas...</option>
+                            <option value="1">La Orotava (Tenerife)</option>
+                            <option value="2">San Cristobal de la Laguna (Tenerife)</option>
+                            <option value="3">Santa Cruz de Tenerife</option>
+                            <option value="4">Acentejo-Sauzal (Tenerife)</option>
+                            <option value="5">Icod de los Vinos (Tenerife)</option>
+                            <option value="6">Puerto de la Cruz (Tenerife)</option>
+                        </select>
+    
+                        <input type="number" name="cantidad" id="cantidad" placeholder="Desde" class="text-black placeholder-black w-full sm:w-auto mb-2 sm:mb-0">
+                        <input type="number" name="cantidad" id="cantidad" placeholder="Hasta" class="text-black placeholder-black w-full sm:w-auto mb-2 sm:mb-0">
+                        <input type="text" class="text-black placeholder-black w-full sm:w-auto mb-2 sm:mb-0" placeholder="Ref" maxlength="15">
+                        
+                        <label for="mapa" class="inline-flex items-center mb-2 sm:mb-0">
+                            <input type="checkbox" id="mapa" name="mapa" class="h-4 w-4 accent-gray-400" required>
+                            <span class="ml-2 text-white">Ver Mapa</span>
+                        </label>
+                        
+                        <div class="inline-flex w-full sm:w-auto justify-center">
+                            <button type="reset" class="bg-white text-black font-bold px-2 py-1 w-1/2 sm:w-auto"> Avanzado</button>
+                            <button type="search" class="bg-gray-200 text-black font-bold px-2 py-1 w-1/2 sm:w-auto"> Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cajas -->
+    <section class="container mx-auto mt-10">
+        <div class="flex flex-col items-center space-y-4 mb-6">
+            <span class="text-3xl font-bold">Propiedades</span>
+        </div>
+
+        <div class=" grid grid-cols-1 md:grid-cols-4 gap-4 gap-y-9 mx-3">
+            <!-- Caja 1 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Alquiler 1.600 €/mes</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja1.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Local comercial en San Cristobal de La Laguna situado en la zona de Gracia,
+                    Superficie Construida 235m2.</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 2 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 110.000 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja2.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Terreno urbanizable en Candelaria situado en la zona de Icerse, Sup. Parcela
+                    618m2.</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 3 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 128.000 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja3.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Terreno rural en Candelaria situado en la zona de Icerse, Sup. Parcela 572m2.
+                </p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 4 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 69.540 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja4.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Oficina en La Orotava - Zona El Mayorazgo, Superficie Construida 57m2, 3
+                    Habitaciones, 1 Baño.</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 5 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 80.000 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja5.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Terreno rural en El Rosario situado en la zona de La Esperanza, Sup. Parcela
+                    5968m2.</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 6 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 260.000 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja6.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Edificio en San Cristobal de La Laguna - Zona Valle Guerra, Superficie
+                    Construida 167m2, 4 Habitaciones, 2 Baños,....</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 7 -->
+            <div class="md:flex md:flex-col ">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 410.000 €</span>
+                </div>
+                <div>
+                    <img src="imagenes/caja7.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Chalet en El Sauzal - Zona Urb. Los Naranjos, Superficie Construida 164m2, Sup.
+                    Parcela 610m2, 2...</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">INFO</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 8 -->
+            <div class="md:flex md:flex-col">
+                <div class="flex justify-center w-full bg-[rgb(204,0,0)]">
+                    <span class="text-white font-bold">Venta 129.900 €</span>
+                </div>
+                <div class="">
+                    <img src="imagenes/caja8.jpg" alt="" class="h-48 w-full md:h-full md:w-full">
+                </div>
+                <p class="text-xs pt-2">Terreno urbano en Santa Cruz de Tenerife situado en la zona de El Sobradillo,
+                    Sup. Parcela 434m2.</p>
+                <div class="mt-8 relative">
+                    <div class="border-t-4 border-[rgb(204,0,0)] w-full"></div>
+                    <div class="absolute right-0 px-2">
+                        <a href="#" class="text-xs">+ INFO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="relative w-full h-96 mt-8">
+        <iframe class="absolute top-0 left-0 w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.646705214384!2d-16.30646132617118!3d28.460064591894795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cd039e0f092d%3A0x5ad276b84faddca!2sInmobiliaria%20Acerco%20Tenerife%2C%20CentroCredit!5e0!3m2!1ses!2ses!4v1725632644711!5m2!1ses!2ses"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Iconos de Redes Sociales -->
+    <div class="bg-[rgb(94,94,94)] py-6 flex items-center md:flex-row ">
+        <div class="flex w-60px pl-10">
+            <img src="imagenes/rss-svgrepo-com.svg" alt="">
+        </div>
+        <div class="flex mx-auto space-x-6">
+            <a href="" class=" text-white"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="" class=" text-white"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-white text-black py-2">
+        <div class="text-center mt-2">
+            <span>Diseñado por <a href=""><span class="text-[rgb(66,139,202)]">CRM Inmovilla</span></a></span>
+        </div>
+    </footer>
+
+    <!-- <div class="flex items-end justify-end p-5">
+        <img src="imagenes/whatsapp-svgrepo-com.svg" alt="" width="70px">
+    </div> -->
+</body>
+
+</html>
